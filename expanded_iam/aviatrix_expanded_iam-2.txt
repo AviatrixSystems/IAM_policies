@@ -1,0 +1,214 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "directconnect:AcceptDirectConnectGatewayAssociationProposal",
+                "directconnect:CreateDirectConnectGateway",
+                "directconnect:CreateDirectConnectGatewayAssociation",
+                "directconnect:CreateDirectConnectGatewayAssociationProposal",
+                "directconnect:DeleteDirectConnectGateway",
+                "directconnect:DeleteDirectConnectGatewayAssociation",
+                "directconnect:DeleteDirectConnectGatewayAssociationProposal"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:AddTags",
+                "elasticloadbalancing:CreateListener",
+                "elasticloadbalancing:CreateLoadBalancer",
+                "elasticloadbalancing:CreateTargetGroup",
+                "elasticloadbalancing:DeleteListener",
+                "elasticloadbalancing:DeleteLoadBalancer",
+                "elasticloadbalancing:DeleteTargetGroup",
+                "elasticloadbalancing:DeregisterTargets",
+                "elasticloadbalancing:ModifyLoadBalancerAttributes",
+                "elasticloadbalancing:RegisterTargets"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "globalaccelerator:CreateAccelerator",
+                "globalaccelerator:CreateEndpointGroup",
+                "globalaccelerator:CreateListener",
+                "globalaccelerator:DeleteAccelerator",
+                "globalaccelerator:DeleteEndpointGroup",
+                "globalaccelerator:DeleteListener",
+                "globalaccelerator:UpdateAccelerator",
+                "globalaccelerator:UpdateEndpointGroup"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "guardduty:CreateDetector",
+                "guardduty:DeleteDetector",
+                "guardduty:UpdateDetector"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "networkmanager:CreateDevice",
+                "networkmanager:CreateGlobalNetwork",
+                "networkmanager:CreateSite",
+                "networkmanager:DeleteGlobalNetwork",
+                "networkmanager:RegisterTransitGateway"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogDelivery",
+                "logs:DeleteLogDelivery"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ram:AcceptResourceShareInvitation",
+                "ram:AssociateResourceShare",
+                "ram:CreateResourceShare",
+                "ram:DeleteResourceShare",
+                "ram:DisassociateResourceSharePermission",
+                "ram:EnableSharingWithAwsOrganization",
+                "ram:TagResource",
+                "ram:UntagResource",
+                "ram:UpdateResourceShare"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "route53:ChangeResourceRecordSets"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:AddRoleToInstanceProfile",
+                "iam:CreateInstanceProfile",
+                "iam:CreateServiceLinkedRole",
+                "iam:DeleteInstanceProfile",
+                "iam:PassRole",
+                "iam:RemoveRoleFromInstanceProfile"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "<IP>",
+                        "<IP>"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:DeleteBucket",
+                "s3:DeleteBucketPolicy",
+                "s3:DeleteObject",
+                "s3:GetBucketPolicy",
+                "s3:PutBucketPolicy",
+                "s3:PutObject"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sqs:AddPermission",
+                "sqs:ChangeMessageVisibility",
+                "sqs:CreateQueue",
+                "sqs:DeleteMessage",
+                "sqs:DeleteQueue",
+                "sqs:GetQueueAttributes",
+                "sqs:GetQueueUrl",
+                "sqs:PurgeQueue",
+                "sqs:ReceiveMessage",
+                "sqs:RemovePermission",
+                "sqs:SendMessage",
+                "sqs:SetQueueAttributes",
+                "sqs:TagQueue"
+            ],
+            "Resource": "arn:aws:sqs:*:*:aviatrix-*"
+        }
+    ]
+}
